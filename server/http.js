@@ -1,4 +1,4 @@
-import {Problem,submit,review,withdraw,publicCatalog} from './domain.js';
+import {Problem,submit,review,withdraw,publicCatalog,savedProfiles,setSavedProfile} from './domain.js';
 import {ownRequest,moderatorRequest} from './privacy.js';
 import {transaction} from './store.js';
 const json=(data,status=200,headers={})=>new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','Pragma':'no-cache','Vary':'Cookie',...headers}});
@@ -23,6 +23,8 @@ export function makeHandler({store,env={},fetcher=fetch,devSessions=null}){
   if(path==='/api/auth/refresh'&&req.method==='POST'){const token=cookies(req).vc_refresh;if(!token)throw new Problem(401,'다시 로그인해주세요.');const result=await authCall('token?grant_type=refresh_token',{refresh_token:token});if(!result.access_token||!result.refresh_token)throw new Problem(401,'다시 로그인해주세요.');const r=json({ok:true});r.headers.append('Set-Cookie',cookie('vc_access',result.access_token,secure,Math.min(result.expires_in||3600,3600)));r.headers.append('Set-Cookie',cookie('vc_refresh',result.refresh_token,secure,604800));return r;}
   if(path==='/api/auth/logout'&&req.method==='POST'){const token=cookies(req).vc_access;let revoked=true;if(ready&&token){try{await authCall('logout',{},token);}catch{revoked=false;}}if(dev)devSessions.delete(cookies(req).vc_dev);const r=json({ok:true,serverRevoked:revoked});for(const name of ['vc_access','vc_refresh','vc_dev'])r.headers.append('Set-Cookie',cookie(name,'',secure,0));return r;}
   const user=await who(req);if(path==='/api/me'&&req.method==='GET')return json({user:user?{emailVerified:user.emailVerified,isAdmin:user.isAdmin}:null});if(!user)throw new Problem(401,'로그인 후 이용해주세요.');if(!store)throw new Problem(503,'저장소가 연결되지 않았습니다.');
+  if(path==='/api/saved'&&req.method==='GET')return json({ids:savedProfiles((await store.read()).state,user)});
+  if(path==='/api/saved'&&req.method==='POST')return json({ids:await transaction(store,state=>setSavedProfile(state,user,body))});
   if(path==='/api/requests'&&req.method==='GET'){const {state}=await store.read();return json({requests:state.requests.filter(r=>r.ownerId===user.id).map(ownRequest)});}
   if(path==='/api/requests'&&req.method==='POST'){if(body.website)throw new Problem(400,'자동 접수가 거절되었습니다.');const request=await transaction(store,s=>submit(s,user,body));return json({request:ownRequest(request)},201);}
   if(path==='/api/requests/withdraw'&&req.method==='POST'){const request=await transaction(store,s=>withdraw(s,user,body));return json({request:ownRequest(request)});}
