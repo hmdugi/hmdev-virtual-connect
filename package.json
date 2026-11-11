@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node scripts/check.mjs && node --test tests/*.test.js",
     "dev": "LOCAL_DEMO=1 node server/dev.js",
-    "start": "node server/dev.js"
+    "start": "node server/dev.js",
+    "edge:build": "node scripts/build-edge.mjs"
   },
   "engines": {
     "node": ">=24"

@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {sqliteStore,transaction} from '../server/store.js';
+import {sqliteStore} from '../server/sqlite-store.js';
+import {transaction} from '../server/store.js';
 import {makeHandler} from '../server/http.js';
 const secret='PRIVATE_SENTINEL_87';
 const p={name:'공개 활동명',bio:'공개 소개',roles:['streamer'],platforms:[],genres:[],vibes:[],officialUrl:'https://example.com/channel'};

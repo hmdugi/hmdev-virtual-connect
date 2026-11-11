@@ -57,3 +57,40 @@ Node 24 이상에서 `npm run dev`. 외부 패키지 설치 없이 실행됩니�
 실제 인증 메일·서버 비밀키 프로비저닝·Vercel 앱 연결/상업 배포는 아직 완료하지 않았습니다.
 
 보안 어드바이저 재검사: Errors 0 / Warnings 0. 정보성 안내 1건은 서버 전용 vc_state에 일반 사용자 허용 정책을 만들지 않은 의도된 기본 거부 설정입니다.
+
+## 실제 연결 완료 범위 — 2026-11-11
+
+이전의 ChatGPT 연결 권한 오류는 해결되었습니다. hmdev 연결로 실제 프로젝트/SQL/보안 어드바이저 조회가 성공했습니다.
+
+### 권장 실행 구조
+
+Vercel 프런트/동일 출처 API 프록시 → Supabase virtual-api Edge Function → hmdev DB의 vc_state. 서버 비밀키는 Supabase 런타임이 제공하며 Vercel·GitHub·브라우저로 복사하지 않습니다. 위의 직접 SUPABASE_SERVICE_ROLE_KEY 환경변수 설정 절차는 선택적 직접 실행 모드이며 현재 배포 방식에는 필요하지 않습니다.
+
+- 실제 Edge Function: virtual-api, version 1, ACTIVE
+- 함수 주소: https://lvrlqlggghcrikjjbidz.supabase.co/functions/v1/virtual-api
+- Vercel 준비 프로젝트: hmdev-virtual-connect, prj_LgAqSzAt8K7uyAOtTfkhUJzkabzB (아직 프런트 배포 없음)
+- Vercel production 환경변수 VIRTUAL_API_URL에 함수 주소만 저장 완료. 서비스 키 저장 없음. Preview 환경에는 실제 DB 연결을 주입하지 않았습니다.
+- `npm run edge:build`는 기존 server 모듈에서 .edge-build 배포 파일을 생성합니다. 비밀키는 생성물에 포함하지 않습니다. 로컬 SQLite 코드는 서버 공통 모듈에서 분리했고 실제 함수에는 넣지 않았습니다.
+
+### 실제 HTTP 검사 결과
+
+| 경로 | 결과 |
+|---|---|
+| /api/config | 200, connected, registrationEnabled=false |
+| /api/catalog | 200, 실제 DB에서 people/works 빈 배열 |
+| /api/me | 200, user=null |
+| /api/requests | 비로그인 401 |
+| /api/admin/requests | 비로그인 401 |
+| /api/auth/start | 공개 접수 중지 503 |
+
+비밀키를 보지 않고 실제 런타임 환경변수를 사용하는 DB 읽기를 확인했습니다. 실제 사용자 신청/매출 데이터를 넣지 않았습니다. 로그인 사용자 인증과 신청·승인 전체 HTTP 흐름은 아직 실사용 검증 전입니다.
+
+### 접수를 열기 전에
+
+- Vercel 프런트를 검토 가능한 환경에 배포하고 실제 Origin을 Edge의 APP_ORIGIN과 맞춥니다. 현재 APP_ORIGIN은 https://hmdev-virtual-connect.vercel.app 입니다. 허용 출처를 임의의 요청 헤더로 신뢰하거나 광범위한 와일드카드로 풀지 않습니다.
+- Supabase 이메일 OTP 템플릿·실제 발송 설정·CAPTCHA를 검증합니다. 인증된 운영자 UUID를 서버 비밀 설정 VIRTUAL_ADMIN_USER_IDS에 지정합니다.
+- 공개 운영 절차·보관/삭제 대응을 준비한 뒤 VIRTUAL_REGISTRATION_ENABLED=true를 설정하고 함수를 다시 배포하여 연결된 실제 사용자 흐름을 확인합니다. 현재는 false로 기본 중지되어 있습니다.
+- Gateway JWT 검사는 false지만 보호 API는 makeHandler의 Supabase 사용자 확인/권한 검사로 인증합니다. 공개 목록/이메일 인증 경로와 HttpOnly 쿠키 인증을 함께 제공하기 위한 구조이며 개발용 가상 계정은 함수에 존재하지 않습니다.
+- 현대식 sb_secret 키는 apikey로만 전달합니다. JWT가 아닌 키를 Authorization Bearer로 보내지 않습니다.
+
+공통 JavaScript 구문 검사 및 19개 자동 테스트 통과. 현재는 실제 DB+서버 API 연결 완료이며 프런트 공개/이메일 인증/운영자 승인 전체 검증/상업 운영 개시는 미완료입니다.
