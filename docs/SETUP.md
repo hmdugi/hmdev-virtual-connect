@@ -36,3 +36,24 @@ Node 24 이상에서 `npm run dev`. 외부 패키지 설치 없이 실행됩니�
 기존 조직과 분리된 `hmdev` 무료 조직을 생성했습니다. 조직 ID: kobvicwpaeiccrzbryoc. 새 DB 프로젝트 생성 화면에서 계정의 활성 무료 프로젝트 2개 한도에 도달했다는 차단을 확인했습니다. 새 DB는 생성되지 않았습니다. 기존 프로젝트 중지/삭제·유료 전환은 수행하지 않았습니다.
 
 연결된 Supabase 도구에는 조직 생성 기능이 없어서 조직은 로그인한 대시보드에서 생성했습니다. 신규 조직/프로젝트를 연결 도구로 관리하려면 해당 범위의 연결도 필요합니다. 다음 선택은 추가 개발 계정의 무료 여력을 확인하여 전용 조직·DB를 만들거나, 유료 비용을 확인하고 별도로 결정하는 것입니다.
+
+## DB 생성·초기 설정 완료 — 2026-11-11
+
+앞선 무료 한도 차단 기록은 해결되었습니다. 사용자가 apple-game DB를 삭제하고 hmdev 프로젝트를 생성했습니다.
+
+- 공용 조직: hmdev (kobvicwpaeiccrzbryoc), Free
+- 공용 프로젝트: hmdev (lvrlqlggghcrikjjbidz), Healthy, 서울 ap-northeast-2
+- 대시보드: https://supabase.com/dashboard/project/lvrlqlggghcrikjjbidz
+- API URL: https://lvrlqlggghcrikjjbidz.supabase.co
+- 생성 전 public 테이블 0개 확인. `db/schema.sql`에 해당하는 vc_state와 빈 상태 행 생성 완료. 다른 서비스의 테이블은 만들지 않았습니다.
+- RLS true, anon SELECT/INSERT false, authenticated SELECT/UPDATE false, service_role SELECT/UPDATE true 확인.
+- service_role의 현재 version 갱신 성공·오래된 version 갱신 0건을 SQL로 검사하고 rollback. version=0, request_count=0 보존 확인. 실제 사용자 데이터 없음.
+- 자동 생성된 public.rls_auto_enable()의 공개/로그인 사용자 SECURITY DEFINER 실행 권한 경고 2건 발견. `db/harden-auto-rls.sql`에 해당하는 권한 회수 후 두 역할 EXECUTE false 확인.
+
+현재 ChatGPT의 Supabase 연결은 기존 조직 범위로 한정되어 새 프로젝트 조회가 권한 오류를 반환합니다. 따라서 초기 SQL은 로그인된 대시보드에서 실행했습니다. 향후 자동 관리·인증 설정·앱 서버 환경변수 연결을 위해 hmdev 조직/프로젝트 범위의 Supabase 앱 연결이 필요합니다. DB 비밀번호나 서비스 비밀키를 채팅/GitHub에 올리지 않습니다.
+
+이 DB는 hmdev 사업 공용입니다. vc_state는 버튜버용 서버 비공개 테이블이며 다른 서비스가 임의로 읽게 하지 않습니다. 향후 공용 DB를 사용하는 서비스에는 서비스별 테이블·권한을 따로 설계하고, 전체 DB 권한의 service_role 키를 모든 앱에 무차별 배포하지 않습니다.
+
+실제 인증 메일·서버 비밀키 프로비저닝·Vercel 앱 연결/상업 배포는 아직 완료하지 않았습니다.
+
+보안 어드바이저 재검사: Errors 0 / Warnings 0. 정보성 안내 1건은 서버 전용 vc_state에 일반 사용자 허용 정책을 만들지 않은 의도된 기본 거부 설정입니다.
