@@ -27,3 +27,11 @@ export function review(s,admin,input,now=Date.now()){
  }
  r.status=input.decision;r.reviewNote=note;r.reviewMessage=message;r.reviewedAt=new Date(now).toISOString();s.audit.push({requestId:r.id,adminId:admin.id,decision:r.status,at:r.reviewedAt});return r;
 }
+export function withdraw(s,user,input,now=Date.now()){
+ if(!user?.id)fail('로그인이 필요합니다.',401);
+ const r=s.requests.find(r=>r.id===input.id&&r.ownerId===user.id);
+ if(!r)fail('신청을 찾을 수 없습니다.',404);
+ if(r.status!=='pending')fail('검토 대기 중인 신청만 취소할 수 있습니다.',409);
+ r.status='withdrawn';r.payload=null;r.note='';r.evidenceUrl='';r.challenge='';r.reviewedAt=new Date(now).toISOString();r.reviewMessage='본인이 검토 신청을 취소했습니다.';
+ s.audit.push({requestId:r.id,decision:'withdrawn',at:r.reviewedAt});return r;
+}

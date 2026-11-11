@@ -1,4 +1,4 @@
-import {Problem,submit,review,publicCatalog} from './domain.js';
+import {Problem,submit,review,withdraw,publicCatalog} from './domain.js';
 import {ownRequest,moderatorRequest} from './privacy.js';
 import {transaction} from './store.js';
 const json=(data,status=200,headers={})=>new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','Pragma':'no-cache','Vary':'Cookie',...headers}});
@@ -24,6 +24,7 @@ export function makeHandler({store,env={},fetcher=fetch,devSessions=null}){
   const user=await who(req);if(path==='/api/me'&&req.method==='GET')return json({user:user?{emailVerified:user.emailVerified,isAdmin:user.isAdmin}:null});if(!user)throw new Problem(401,'로그인 후 이용해주세요.');if(!store)throw new Problem(503,'저장소가 연결되지 않았습니다.');
   if(path==='/api/requests'&&req.method==='GET'){const {state}=await store.read();return json({requests:state.requests.filter(r=>r.ownerId===user.id).map(ownRequest)});}
   if(path==='/api/requests'&&req.method==='POST'){if(body.website)throw new Problem(400,'자동 접수가 거절되었습니다.');const request=await transaction(store,s=>submit(s,user,body));return json({request:ownRequest(request)},201);}
+  if(path==='/api/requests/withdraw'&&req.method==='POST'){const request=await transaction(store,s=>withdraw(s,user,body));return json({request:ownRequest(request)});}
   if(path==='/api/admin/requests'&&req.method==='GET'){if(!user.isAdmin)throw new Problem(403,'운영자 권한이 필요합니다.');const {state}=await store.read();return json({requests:state.requests.filter(r=>r.status==='pending').slice(0,100).map(moderatorRequest)});}
   if(path==='/api/admin/review'&&req.method==='POST'){const request=await transaction(store,s=>review(s,user,body));return json({request:ownRequest(request)});}
   return json({error:'요청을 찾을 수 없습니다.'},404);
