@@ -1,0 +1,15 @@
+{
+  "source_records_considered": 664,
+  "new_candidates": 650,
+  "matched_existing": 10,
+  "deduplicated": 4,
+  "platforms": {
+    "SOOP": 295,
+    "null": 2,
+    "YouTube": 3,
+    "치지직": 350
+  },
+  "basic_link_complete": 61,
+  "topics_present_unverified": 623,
+  "inactive_flags": 6
+}
