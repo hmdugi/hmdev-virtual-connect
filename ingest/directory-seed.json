@@ -1,0 +1,584 @@
+[
+  {
+    "id": "stellive-yuni",
+    "display_name": "아야츠노 유니",
+    "agency": "스텔라이브",
+    "primary_platform": "치지직",
+    "primary_url": "https://chzzk.naver.com/45e71a76e949e16a34764deb962f9d9f",
+    "youtube_url": "https://www.youtube.com/@ayatsunoyuni",
+    "social_urls": [
+      "https://twitter.com/AyatsunoYuni"
+    ],
+    "topics": [],
+    "career_started_no_later_than": null,
+    "career_start_is_exact": false,
+    "sources": [
+      {
+        "url": "https://stellive.me/yuni",
+        "kind": "official_profile",
+        "fields": [
+          "display_name",
+          "agency",
+          "primary_url",
+          "youtube_url",
+          "social_urls"
+        ],
+        "checked_on": "2026-11-13"
+      }
+    ],
+    "review_status": "pending",
+    "review_reasons": [
+      "broadcast_hours_unverified",
+      "recent_live_activity_unverified",
+      "topics_unverified",
+      "career_unverified"
+    ]
+  },
+  {
+    "id": "stellive-huya",
+    "display_name": "사키하네 후야",
+    "agency": "스텔라이브",
+    "primary_platform": "치지직",
+    "primary_url": "https://chzzk.naver.com/36ddb9bb4f17593b60f1b63cec86611d",
+    "youtube_url": "https://www.youtube.com/channel/UC0YQnenKBCu5sGb7H61n6HA",
+    "social_urls": [
+      "https://x.com/SakihaneHuya"
+    ],
+    "topics": [],
+    "career_started_no_later_than": null,
+    "career_start_is_exact": false,
+    "sources": [
+      {
+        "url": "https://stellive.me/huya",
+        "kind": "official_profile",
+        "fields": [
+          "display_name",
+          "agency",
+          "primary_url",
+          "youtube_url",
+          "social_urls"
+        ],
+        "checked_on": "2026-11-13"
+      }
+    ],
+    "review_status": "pending",
+    "review_reasons": [
+      "broadcast_hours_unverified",
+      "recent_live_activity_unverified",
+      "topics_unverified",
+      "career_unverified"
+    ]
+  },
+  {
+    "id": "stellive-hina",
+    "display_name": "시라유키 히나",
+    "agency": "스텔라이브",
+    "primary_platform": "치지직",
+    "primary_url": "https://chzzk.naver.com/b044e3a3b9259246bc92e863e7d3f3b8",
+    "youtube_url": "https://www.youtube.com/@shirayukihina",
+    "social_urls": [
+      "https://twitter.com/Shirayukihina_"
+    ],
+    "topics": [],
+    "career_started_no_later_than": "2025-03-23",
+    "career_start_is_exact": false,
+    "sources": [
+      {
+        "url": "https://stellive.me/hina",
+        "kind": "official_profile",
+        "fields": [
+          "display_name",
+          "agency",
+          "primary_url",
+          "youtube_url",
+          "social_urls"
+        ],
+        "checked_on": "2026-11-13"
+      },
+      {
+        "url": "https://stellive.me/news/4582",
+        "kind": "official_past_activity",
+        "fields": [
+          "career_started_no_later_than"
+        ],
+        "observed_date": "2025-03-23"
+      }
+    ],
+    "review_status": "pending",
+    "review_reasons": [
+      "broadcast_hours_unverified",
+      "recent_live_activity_unverified",
+      "topics_unverified"
+    ]
+  },
+  {
+    "id": "stellive-mashiro",
+    "display_name": "네네코 마시로",
+    "agency": "스텔라이브",
+    "primary_platform": "치지직",
+    "primary_url": "https://chzzk.naver.com/4515b179f86b67b4981e16190817c580",
+    "youtube_url": "https://www.youtube.com/@neneko_mashiro",
+    "social_urls": [
+      "https://twitter.com/NenekoMashiro"
+    ],
+    "topics": [],
+    "career_started_no_later_than": "2025-03-22",
+    "career_start_is_exact": false,
+    "sources": [
+      {
+        "url": "https://stellive.me/mashiro",
+        "kind": "official_profile",
+        "fields": [
+          "display_name",
+          "agency",
+          "primary_url",
+          "youtube_url",
+          "social_urls"
+        ],
+        "checked_on": "2026-11-13"
+      },
+      {
+        "url": "https://stellive.me/news/4582",
+        "kind": "official_past_activity",
+        "fields": [
+          "career_started_no_later_than"
+        ],
+        "observed_date": "2025-03-22"
+      }
+    ],
+    "review_status": "pending",
+    "review_reasons": [
+      "broadcast_hours_unverified",
+      "recent_live_activity_unverified",
+      "topics_unverified"
+    ]
+  },
+  {
+    "id": "stellive-lize",
+    "display_name": "아카네 리제",
+    "agency": "스텔라이브",
+    "primary_platform": "치지직",
+    "primary_url": "https://chzzk.naver.com/4325b1d5bbc321fad3042306646e2e50",
+    "youtube_url": "https://www.youtube.com/@akanelize",
+    "social_urls": [
+      "https://twitter.com/AkaneLize"
+    ],
+    "topics": [],
+    "career_started_no_later_than": "2025-03-23",
+    "career_start_is_exact": false,
+    "sources": [
+      {
+        "url": "https://stellive.me/lize",
+        "kind": "official_profile",
+        "fields": [
+          "display_name",
+          "agency",
+          "primary_url",
+          "youtube_url",
+          "social_urls"
+        ],
+        "checked_on": "2026-11-13"
+      },
+      {
+        "url": "https://stellive.me/news/4582",
+        "kind": "official_past_activity",
+        "fields": [
+          "career_started_no_later_than"
+        ],
+        "observed_date": "2025-03-23"
+      }
+    ],
+    "review_status": "pending",
+    "review_reasons": [
+      "broadcast_hours_unverified",
+      "recent_live_activity_unverified",
+      "topics_unverified"
+    ]
+  },
+  {
+    "id": "stellive-tabi",
+    "display_name": "아라하시 타비",
+    "agency": "스텔라이브",
+    "primary_platform": "치지직",
+    "primary_url": "https://chzzk.naver.com/a6c4ddb09cdb160478996007bff35296",
+    "youtube_url": "https://www.youtube.com/@arahashitabi",
+    "social_urls": [
+      "https://twitter.com/ArahashiTabi"
+    ],
+    "topics": [],
+    "career_started_no_later_than": "2025-03-22",
+    "career_start_is_exact": false,
+    "sources": [
+      {
+        "url": "https://stellive.me/tabi",
+        "kind": "official_profile",
+        "fields": [
+          "display_name",
+          "agency",
+          "primary_url",
+          "youtube_url",
+          "social_urls"
+        ],
+        "checked_on": "2026-11-13"
+      },
+      {
+        "url": "https://stellive.me/news/4582",
+        "kind": "official_past_activity",
+        "fields": [
+          "career_started_no_later_than"
+        ],
+        "observed_date": "2025-03-22"
+      }
+    ],
+    "review_status": "pending",
+    "review_reasons": [
+      "broadcast_hours_unverified",
+      "recent_live_activity_unverified",
+      "topics_unverified"
+    ]
+  },
+  {
+    "id": "stellive-shibuki",
+    "display_name": "텐코 시부키",
+    "agency": "스텔라이브",
+    "primary_platform": "치지직",
+    "primary_url": "https://chzzk.naver.com/64d76089fba26b180d9c9e48a32600d9",
+    "youtube_url": "https://www.youtube.com/channel/UCYxLMfeX1CbMBll9MsGlzmw",
+    "social_urls": [
+      "https://twitter.com/TenkoShibuki"
+    ],
+    "topics": [],
+    "career_started_no_later_than": "2025-05-18",
+    "career_start_is_exact": false,
+    "sources": [
+      {
+        "url": "https://stellive.me/shibuki",
+        "kind": "official_profile",
+        "fields": [
+          "display_name",
+          "agency",
+          "primary_url",
+          "youtube_url",
+          "social_urls"
+        ],
+        "checked_on": "2026-11-13"
+      },
+      {
+        "url": "https://stellive.me/news/5599",
+        "kind": "official_past_activity",
+        "fields": [
+          "career_started_no_later_than"
+        ],
+        "observed_date": "2025-05-18"
+      }
+    ],
+    "review_status": "pending",
+    "review_reasons": [
+      "broadcast_hours_unverified",
+      "recent_live_activity_unverified",
+      "topics_unverified"
+    ]
+  },
+  {
+    "id": "stellive-rin",
+    "display_name": "아오쿠모 린",
+    "agency": "스텔라이브",
+    "primary_platform": "치지직",
+    "primary_url": "https://chzzk.naver.com/516937b5f85cbf2249ce31b0ad046b0f",
+    "youtube_url": "https://www.youtube.com/channel/UCQmcltnre6aG9SkDRYZqFIg",
+    "social_urls": [
+      "https://twitter.com/AokumoRin"
+    ],
+    "topics": [],
+    "career_started_no_later_than": "2025-05-18",
+    "career_start_is_exact": false,
+    "sources": [
+      {
+        "url": "https://stellive.me/rin",
+        "kind": "official_profile",
+        "fields": [
+          "display_name",
+          "agency",
+          "primary_url",
+          "youtube_url",
+          "social_urls"
+        ],
+        "checked_on": "2026-11-13"
+      },
+      {
+        "url": "https://stellive.me/news/5599",
+        "kind": "official_past_activity",
+        "fields": [
+          "career_started_no_later_than"
+        ],
+        "observed_date": "2025-05-18"
+      }
+    ],
+    "review_status": "pending",
+    "review_reasons": [
+      "broadcast_hours_unverified",
+      "recent_live_activity_unverified",
+      "topics_unverified"
+    ]
+  },
+  {
+    "id": "stellive-nana",
+    "display_name": "하나코 나나",
+    "agency": "스텔라이브",
+    "primary_platform": "치지직",
+    "primary_url": "https://chzzk.naver.com/4d812b586ff63f8a2946e64fa860bbf5",
+    "youtube_url": "https://www.youtube.com/channel/UCcA21_PzN1EhNe7xS4MJGsQ",
+    "social_urls": [
+      "https://twitter.com/HanakoNana_"
+    ],
+    "topics": [],
+    "career_started_no_later_than": "2025-05-18",
+    "career_start_is_exact": false,
+    "sources": [
+      {
+        "url": "https://stellive.me/nana",
+        "kind": "official_profile",
+        "fields": [
+          "display_name",
+          "agency",
+          "primary_url",
+          "youtube_url",
+          "social_urls"
+        ],
+        "checked_on": "2026-11-13"
+      },
+      {
+        "url": "https://stellive.me/news/5599",
+        "kind": "official_past_activity",
+        "fields": [
+          "career_started_no_later_than"
+        ],
+        "observed_date": "2025-05-18"
+      }
+    ],
+    "review_status": "pending",
+    "review_reasons": [
+      "broadcast_hours_unverified",
+      "recent_live_activity_unverified",
+      "topics_unverified"
+    ]
+  },
+  {
+    "id": "stellive-riko",
+    "display_name": "유즈하 리코",
+    "agency": "스텔라이브",
+    "primary_platform": "치지직",
+    "primary_url": "https://chzzk.naver.com/8fd39bb8de623317de90654718638b10",
+    "youtube_url": "https://www.youtube.com/channel/UCj0c1jUr91dTetIQP2pFeLA",
+    "social_urls": [
+      "https://twitter.com/YuzuhaRiko"
+    ],
+    "topics": [],
+    "career_started_no_later_than": "2025-05-18",
+    "career_start_is_exact": false,
+    "sources": [
+      {
+        "url": "https://stellive.me/riko",
+        "kind": "official_profile",
+        "fields": [
+          "display_name",
+          "agency",
+          "primary_url",
+          "youtube_url",
+          "social_urls"
+        ],
+        "checked_on": "2026-11-13"
+      },
+      {
+        "url": "https://stellive.me/news/5599",
+        "kind": "official_past_activity",
+        "fields": [
+          "career_started_no_later_than"
+        ],
+        "observed_date": "2025-05-18"
+      }
+    ],
+    "review_status": "pending",
+    "review_reasons": [
+      "broadcast_hours_unverified",
+      "recent_live_activity_unverified",
+      "topics_unverified"
+    ]
+  },
+  {
+    "id": "stellive-toa",
+    "display_name": "시즈키 토아",
+    "agency": "스텔라이브",
+    "primary_platform": "치지직",
+    "primary_url": "https://chzzk.naver.com/2299fad4bebb504b0978e1ec08b2f7d3",
+    "youtube_url": "https://www.youtube.com/@ShizukiToa",
+    "social_urls": [
+      "https://x.com/Shizukitoa_"
+    ],
+    "topics": [],
+    "career_started_no_later_than": "2026-10-17",
+    "career_start_is_exact": true,
+    "sources": [
+      {
+        "url": "https://stellive.me/toa",
+        "kind": "official_profile",
+        "fields": [
+          "display_name",
+          "agency",
+          "primary_url",
+          "youtube_url",
+          "social_urls"
+        ],
+        "checked_on": "2026-11-13"
+      },
+      {
+        "url": "https://stellive.me/news/14594",
+        "kind": "official_debut_announcement",
+        "fields": [
+          "career_started_no_later_than"
+        ],
+        "observed_date": "2026-10-17"
+      }
+    ],
+    "review_status": "pending",
+    "review_reasons": [
+      "broadcast_hours_unverified",
+      "recent_live_activity_unverified",
+      "topics_unverified"
+    ],
+    "career_exception_approved": true,
+    "career_exception_reason": "사용자 승인: 스텔라이브 4기 신인 경력 3개월 요건 예외, 2026-11-13"
+  },
+  {
+    "id": "stellive-rang",
+    "display_name": "코가네 랑",
+    "agency": "스텔라이브",
+    "primary_platform": "치지직",
+    "primary_url": "https://chzzk.naver.com/c657aa3592260a2b59669a72ec151936",
+    "youtube_url": "https://www.youtube.com/@coganerang",
+    "social_urls": [
+      "https://x.com/Coganerang"
+    ],
+    "topics": [],
+    "career_started_no_later_than": "2026-10-17",
+    "career_start_is_exact": true,
+    "sources": [
+      {
+        "url": "https://stellive.me/rang",
+        "kind": "official_profile",
+        "fields": [
+          "display_name",
+          "agency",
+          "primary_url",
+          "youtube_url",
+          "social_urls"
+        ],
+        "checked_on": "2026-11-13"
+      },
+      {
+        "url": "https://stellive.me/news/14594",
+        "kind": "official_debut_announcement",
+        "fields": [
+          "career_started_no_later_than"
+        ],
+        "observed_date": "2026-10-17"
+      }
+    ],
+    "review_status": "pending",
+    "review_reasons": [
+      "broadcast_hours_unverified",
+      "recent_live_activity_unverified",
+      "topics_unverified"
+    ],
+    "career_exception_approved": true,
+    "career_exception_reason": "사용자 승인: 스텔라이브 4기 신인 경력 3개월 요건 예외, 2026-11-13"
+  },
+  {
+    "id": "stellive-hiyori",
+    "display_name": "하나요 히요리",
+    "agency": "스텔라이브",
+    "primary_platform": "치지직",
+    "primary_url": "https://chzzk.naver.com/49d2c3cf8f0b2843d934ec15e82bb54c",
+    "youtube_url": "https://www.youtube.com/@HanayoHiyori",
+    "social_urls": [
+      "https://x.com/hanayohiyori"
+    ],
+    "topics": [],
+    "career_started_no_later_than": "2026-10-18",
+    "career_start_is_exact": true,
+    "sources": [
+      {
+        "url": "https://stellive.me/hiyori",
+        "kind": "official_profile",
+        "fields": [
+          "display_name",
+          "agency",
+          "primary_url",
+          "youtube_url",
+          "social_urls"
+        ],
+        "checked_on": "2026-11-13"
+      },
+      {
+        "url": "https://stellive.me/news/14633",
+        "kind": "official_debut_announcement",
+        "fields": [
+          "career_started_no_later_than"
+        ],
+        "observed_date": "2026-10-18"
+      }
+    ],
+    "review_status": "pending",
+    "review_reasons": [
+      "broadcast_hours_unverified",
+      "recent_live_activity_unverified",
+      "topics_unverified"
+    ],
+    "career_exception_approved": true,
+    "career_exception_reason": "사용자 승인: 스텔라이브 4기 신인 경력 3개월 요건 예외, 2026-11-13"
+  },
+  {
+    "id": "stellive-mary",
+    "display_name": "토키노 메리",
+    "agency": "스텔라이브",
+    "primary_platform": "치지직",
+    "primary_url": "https://chzzk.naver.com/792acf9ca28b42918710327e14b06b68",
+    "youtube_url": "https://www.youtube.com/@TokinoMaryChannel",
+    "social_urls": [
+      "https://x.com/TokinoMary"
+    ],
+    "topics": [],
+    "career_started_no_later_than": "2026-10-18",
+    "career_start_is_exact": true,
+    "sources": [
+      {
+        "url": "https://stellive.me/mary",
+        "kind": "official_profile",
+        "fields": [
+          "display_name",
+          "agency",
+          "primary_url",
+          "youtube_url",
+          "social_urls"
+        ],
+        "checked_on": "2026-11-13"
+      },
+      {
+        "url": "https://stellive.me/news/14633",
+        "kind": "official_debut_announcement",
+        "fields": [
+          "career_started_no_later_than"
+        ],
+        "observed_date": "2026-10-18"
+      }
+    ],
+    "review_status": "pending",
+    "review_reasons": [
+      "broadcast_hours_unverified",
+      "recent_live_activity_unverified",
+      "topics_unverified"
+    ],
+    "career_exception_approved": true,
+    "career_exception_reason": "사용자 승인: 스텔라이브 4기 신인 경력 3개월 요건 예외, 2026-11-13"
+  }
+]

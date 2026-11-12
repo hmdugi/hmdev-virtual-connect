@@ -1,0 +1,172 @@
+[
+  {
+    "id": "stellive-yuni",
+    "displayName": "아야츠노 유니",
+    "eligible": false,
+    "status": "pending",
+    "verifiedHoursLowerBound": 0,
+    "reasons": [
+      "career_unverified",
+      "broadcast_hours_unverified_or_below_100",
+      "recent_live_activity_unverified",
+      "required_fields_incomplete"
+    ]
+  },
+  {
+    "id": "stellive-huya",
+    "displayName": "사키하네 후야",
+    "eligible": false,
+    "status": "pending",
+    "verifiedHoursLowerBound": 0,
+    "reasons": [
+      "career_unverified",
+      "broadcast_hours_unverified_or_below_100",
+      "recent_live_activity_unverified",
+      "required_fields_incomplete"
+    ]
+  },
+  {
+    "id": "stellive-hina",
+    "displayName": "시라유키 히나",
+    "eligible": false,
+    "status": "pending",
+    "verifiedHoursLowerBound": 0,
+    "reasons": [
+      "broadcast_hours_unverified_or_below_100",
+      "recent_live_activity_unverified",
+      "required_fields_incomplete"
+    ]
+  },
+  {
+    "id": "stellive-mashiro",
+    "displayName": "네네코 마시로",
+    "eligible": false,
+    "status": "pending",
+    "verifiedHoursLowerBound": 0,
+    "reasons": [
+      "broadcast_hours_unverified_or_below_100",
+      "recent_live_activity_unverified",
+      "required_fields_incomplete"
+    ]
+  },
+  {
+    "id": "stellive-lize",
+    "displayName": "아카네 리제",
+    "eligible": false,
+    "status": "pending",
+    "verifiedHoursLowerBound": 0,
+    "reasons": [
+      "broadcast_hours_unverified_or_below_100",
+      "recent_live_activity_unverified",
+      "required_fields_incomplete"
+    ]
+  },
+  {
+    "id": "stellive-tabi",
+    "displayName": "아라하시 타비",
+    "eligible": false,
+    "status": "pending",
+    "verifiedHoursLowerBound": 0,
+    "reasons": [
+      "broadcast_hours_unverified_or_below_100",
+      "recent_live_activity_unverified",
+      "required_fields_incomplete"
+    ]
+  },
+  {
+    "id": "stellive-shibuki",
+    "displayName": "텐코 시부키",
+    "eligible": false,
+    "status": "pending",
+    "verifiedHoursLowerBound": 0,
+    "reasons": [
+      "broadcast_hours_unverified_or_below_100",
+      "recent_live_activity_unverified",
+      "required_fields_incomplete"
+    ]
+  },
+  {
+    "id": "stellive-rin",
+    "displayName": "아오쿠모 린",
+    "eligible": false,
+    "status": "pending",
+    "verifiedHoursLowerBound": 0,
+    "reasons": [
+      "broadcast_hours_unverified_or_below_100",
+      "recent_live_activity_unverified",
+      "required_fields_incomplete"
+    ]
+  },
+  {
+    "id": "stellive-nana",
+    "displayName": "하나코 나나",
+    "eligible": false,
+    "status": "pending",
+    "verifiedHoursLowerBound": 0,
+    "reasons": [
+      "broadcast_hours_unverified_or_below_100",
+      "recent_live_activity_unverified",
+      "required_fields_incomplete"
+    ]
+  },
+  {
+    "id": "stellive-riko",
+    "displayName": "유즈하 리코",
+    "eligible": false,
+    "status": "pending",
+    "verifiedHoursLowerBound": 0,
+    "reasons": [
+      "broadcast_hours_unverified_or_below_100",
+      "recent_live_activity_unverified",
+      "required_fields_incomplete"
+    ]
+  },
+  {
+    "id": "stellive-toa",
+    "displayName": "시즈키 토아",
+    "eligible": false,
+    "status": "pending",
+    "verifiedHoursLowerBound": 0,
+    "reasons": [
+      "broadcast_hours_unverified_or_below_100",
+      "recent_live_activity_unverified",
+      "required_fields_incomplete"
+    ]
+  },
+  {
+    "id": "stellive-rang",
+    "displayName": "코가네 랑",
+    "eligible": false,
+    "status": "pending",
+    "verifiedHoursLowerBound": 0,
+    "reasons": [
+      "broadcast_hours_unverified_or_below_100",
+      "recent_live_activity_unverified",
+      "required_fields_incomplete"
+    ]
+  },
+  {
+    "id": "stellive-hiyori",
+    "displayName": "하나요 히요리",
+    "eligible": false,
+    "status": "pending",
+    "verifiedHoursLowerBound": 0,
+    "reasons": [
+      "broadcast_hours_unverified_or_below_100",
+      "recent_live_activity_unverified",
+      "required_fields_incomplete"
+    ]
+  },
+  {
+    "id": "stellive-mary",
+    "displayName": "토키노 메리",
+    "eligible": false,
+    "status": "pending",
+    "verifiedHoursLowerBound": 0,
+    "reasons": [
+      "broadcast_hours_unverified_or_below_100",
+      "recent_live_activity_unverified",
+      "required_fields_incomplete"
+    ]
+  }
+]

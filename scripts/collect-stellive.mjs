@@ -1,0 +1,6 @@
+import{writeFile,mkdir}from'node:fs/promises';
+const root='https://stellive.me',headers={'User-Agent':'VirtualinkDirectory/0.1 (public talent directory research; low frequency)'},decode=s=>s.replace(/&amp;/g,'&').replace(/&#39;/g,"'").replace(/&quot;/g,'"');
+async function read(path){const response=await fetch(root+path,{headers,signal:AbortSignal.timeout(12000)});if(!response.ok)throw new Error(`HTTP ${response.status}: ${path}`);return response.text();}
+const robots=await read('/robots.txt');if(/Disallow:\s*\/\s*$/im.test(robots))throw new Error('자동 수집 허용 범위를 확인해주세요.');const page=await read('/talents'),routes=[...new Set([...page.matchAll(/href="(\/[a-z]+)" class="ds-b"/g)].map(m=>m[1]))];const profiles=[];
+for(const route of routes){try{const html=await read(route),urls=[...new Set([...html.matchAll(/(?:href|src)=["'](https?:[^"']+)["']/g)].map(m=>decode(m[1])))];profiles.push({route,title:decode(html.match(/<title>([^<]+)/)?.[1]||''),urls:urls.filter(url=>/youtube\.com|youtu\.be|twitter\.com|x\.com|chzzk\.naver\.com/.test(url)),sourceUrl:root+route,fetchedAt:new Date().toISOString()});}catch(error){console.error(route,error.message);}}
+await mkdir('ingest',{recursive:true});await writeFile('ingest/official-profiles.json',JSON.stringify(profiles,null,2));console.log(`공식 프로필 ${profiles.length}개 수집. 자격 검증과 공개 등록은 별도입니다.`);
